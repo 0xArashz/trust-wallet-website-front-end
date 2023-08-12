@@ -1,0 +1,71 @@
+@media screen and (min-width: 576px) {
+    html {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+    .header .download-platforms {
+        grid-auto-flow: column;
+        column-gap: 14px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    html {
+        font-size: 19px;
+    }
+    a {
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .container header .header {
+        grid-template-areas:
+            "ln tn tn"
+            "ic ic ae"
+            "dp dp ae"
+        ;
+        gap: 120px 75px;
+    }
+    .header img.logo-name {
+        grid-area: ln;
+    }
+    .header .top-navbar {
+        grid-area: tn;
+        width: 100%;
+        grid-template-columns: repeat(5, 18.5%);
+        grid-auto-flow: column;
+        align-items: center;
+        column-gap: 10px;
+    }
+    .header .top-navbar .nav-link {
+        padding: 18px 6px;
+        font-size: 15px;
+        box-shadow: none;
+    }
+    .header .top-navbar .nav-link:hover {
+        color: var(--black);
+        background-color: var(--white);
+    }
+    .header .intro-content {
+        grid-area: ic;
+        justify-self: left;
+        width: 85%;
+        text-align: left;
+    }
+    .header .download-platforms {
+        grid-area: dp;
+        justify-self: left;
+        margin-top: -100px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: row;
+    }
+    .header img.app-env {
+        grid-area: ae;
+        margin-top: -25px;
+        margin-left: -80px;
+    }
+}

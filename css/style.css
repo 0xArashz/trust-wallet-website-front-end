@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: IBM Plex Sans, sans-serif;
+}
+
+html {
+    font-size: 16px;
+    --black: black;
+    --white: white;
+    --blue: rgb(11, 101, 198);
+}
+
+.container > * > * {
+    max-width: 1100px;
+    padding: 1.5em;
+    margin: 0 auto;
+}
+
+.container header {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.container header .header {
+    display: grid;
+    justify-items: center;
+    row-gap: 5em;
+    text-align: center;
+}
+
+.header img.logo-name {
+    width: 250px;
+    height: 70px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--white);
+    box-shadow: 0 0 30px var(--white);
+}
+
+.header .top-navbar {
+    width: min(70%, 350px);
+    display: grid;
+    row-gap: 1em;
+}
+
+.header .top-navbar .nav-link {
+    padding: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 0 5px var(--white);
+}
+
+.header .intro-content {
+    max-width: 520px;
+}
+
+.header .download-platforms {
+    height: fit-content;
+    display: grid;
+    row-gap: 0.5em;
+}
+
+.header .download-platforms img {
+    width: 170px;
+}
+
+.header img.app-env {
+    width: min(100%, 500px);
+    margin-bottom: 3em;
+}

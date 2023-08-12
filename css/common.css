@@ -1,0 +1,24 @@
+a {
+    all: unset;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    margin-top: 1em;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+img.app-env {
+    animation: up-down 4s linear infinite;
+}
+
+@keyframes up-down {
+    50% {
+        transform: translateY(15px);
+    }
+}
