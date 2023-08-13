@@ -2,6 +2,16 @@
     html {
         font-size: 17px;
     }
+    .main .assets .buttons {
+        flex-direction: row;
+    }
+    .main .assets .add-token-btn {
+        margin: 0 0 0 0.7em;
+    }
+    .main .assets .chains-coins {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3em;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -10,7 +20,10 @@
     }
     .header .download-platforms {
         grid-auto-flow: column;
-        column-gap: 14px;
+        column-gap: 18px;
+    }
+    .main .assets .chains-coins {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -18,9 +31,13 @@
     html {
         font-size: 19px;
     }
-    a {
+    a,
+    button {
         cursor: pointer;
         transition: 0.3s;
+    }
+    img.app-env {
+        width: 450px;
     }
     .container header .header {
         grid-template-areas:
@@ -38,7 +55,7 @@
         width: 100%;
         grid-template-columns: repeat(5, 18.5%);
         grid-auto-flow: column;
-        align-items: center;
+        align-content: center;
         column-gap: 10px;
     }
     .header .top-navbar .nav-link {
@@ -53,13 +70,13 @@
     .header .intro-content {
         grid-area: ic;
         justify-self: left;
-        width: 85%;
+        width: 78%;
         text-align: left;
     }
     .header .download-platforms {
         grid-area: dp;
         justify-self: left;
-        margin-top: -100px;
+        margin-top: -150px;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-flow: row;
     }
@@ -67,5 +84,39 @@
         grid-area: ae;
         margin-top: -25px;
         margin-left: -80px;
+    }
+    .main .features .intro-content {
+        max-width: fit-content;
+    }
+    .main .features .features-info {
+        width: fit-content;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 28px;
+    }
+    .main .assets {
+        grid-template-columns: 60% 37%;
+        column-gap: 30px;
+    }
+    .main .assets .intro-content {
+        justify-self: left;
+        align-self: center;
+    }
+    .main .assets .intro-content:nth-child(3) {
+        max-width: fit-content;
+        text-align: left;
+    }
+    .main .assets .buttons {
+        align-self: center;
+    }
+    .main .assets .add-token-btn:hover {
+        color: var(--white);
+        background-color: var(--blue);
+    }
+    .main .assets .chains-coins {
+        grid-column: span 2;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .assets .additional-phrase {
+        grid-column: span 2;
     }
 }

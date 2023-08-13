@@ -9,13 +9,20 @@ html {
     font-size: 16px;
     --black: black;
     --white: white;
+    --dark-gray: rgb(100, 100, 100);
     --blue: rgb(11, 101, 198);
+}
+
+.container {
+    display: grid;
+    row-gap: 4em;
 }
 
 .container > * > * {
     max-width: 1100px;
     padding: 1.5em;
     margin: 0 auto;
+    display: grid;
 }
 
 .container header {
@@ -23,11 +30,9 @@ html {
     background-color: var(--blue);
 }
 
-.container header .header {
-    display: grid;
+header .header {
     justify-items: center;
-    row-gap: 5em;
-    text-align: center;
+    row-gap: 4em;
 }
 
 .header img.logo-name {
@@ -47,19 +52,13 @@ html {
 
 .header .top-navbar .nav-link {
     padding: 1em;
-    border-radius: 5px;
-    font-weight: bold;
     box-shadow: 0 0 5px var(--white);
-}
-
-.header .intro-content {
-    max-width: 520px;
 }
 
 .header .download-platforms {
     height: fit-content;
     display: grid;
-    row-gap: 0.5em;
+    row-gap: 0.8em;
 }
 
 .header .download-platforms img {
@@ -67,6 +66,64 @@ html {
 }
 
 .header img.app-env {
-    width: min(100%, 500px);
     margin-bottom: 3em;
+}
+
+.container main .main {
+    row-gap: 6em;
+}
+
+main .main > * {
+    display: grid;
+    justify-items: center;
+}
+
+.main .features {
+    row-gap: 2.5em;
+}
+
+.main .features .features-info {
+    width: min(90%, 600px);
+    display: grid;
+    row-gap: 1.5em;
+}
+
+.main .features-info .feature {
+    padding: 1em;
+    border-left: 7px solid var(--blue);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px var(--blue);
+}
+
+.main .feature .fa-circle-check {
+    margin-right: 10px;
+    font-size: 17px;
+    color: var(--blue);
+}
+
+.main .assets {
+    row-gap: 3em;
+}
+
+.main .assets .buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.main .assets .add-token-btn {
+    margin: 0.7em 0;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    background-color: var(--white);
+}
+
+.main .assets .chains-coins {
+    display: grid;
+    row-gap: 1em;
+}
+
+.main .assets .chain-coin {
+    display: flex;
+    align-items: center;
 }
