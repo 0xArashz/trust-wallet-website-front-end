@@ -1,27 +1,33 @@
 a,
-button {
+button,
+input,
+select {
     all: unset;
+    padding: 1em;
     border-radius: 5px;
     font-weight: bold;
+}
+
+a {
     text-align: center;
 }
 
 button {
     width: 130px;
-    padding: 1em;
     border: 2px solid var(--blue);
-    font-size: 0.9rem;
+    text-align: center;
+    font-size: 0.9em;
     color: var(--white);
     background-color: var(--blue);
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: 2.2em;
 }
 
 h2 {
     margin-top: 1em;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: normal;
     line-height: 1.6;
 }
@@ -45,7 +51,7 @@ img.crypto-logo {
 }
 
 span {
-    font-size: 0.83rem;
+    font-size: 0.83em;
 }
 
 .intro-content {
@@ -53,7 +59,22 @@ span {
     text-align: center;
 }
 
+.chains-coins {
+    display: grid;
+    row-gap: 1em;
+}
+
+.chain-coin {
+    padding: 0.4em;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 5px var(--blue);
+}
+
 .additional-phrase {
-    font-size: 0.9rem;
+    width: fit-content;
+    margin: 2em auto 0;
+    font-size: 0.9em;
     color: var(--dark-gray);
 }

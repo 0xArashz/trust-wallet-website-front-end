@@ -30,13 +30,13 @@ html {
     background-color: var(--blue);
 }
 
-header .header {
+.container header .header {
     justify-items: center;
     row-gap: 4em;
 }
 
 .header img.logo-name {
-    width: 250px;
+    width: 90vw;
     height: 70px;
     padding: 15px;
     border-radius: 5px;
@@ -45,20 +45,24 @@ header .header {
 }
 
 .header .top-navbar {
-    width: min(70%, 350px);
+    width: min(70%, 400px);
     display: grid;
     row-gap: 1em;
 }
 
 .header .top-navbar .nav-link {
-    padding: 1em;
-    box-shadow: 0 0 5px var(--white);
+    color: var(--black);
+    background-color: var(--white);
 }
 
 .header .download-platforms {
     height: fit-content;
     display: grid;
     row-gap: 0.8em;
+}
+
+.header .download-platforms a {
+    padding: 0;
 }
 
 .header .download-platforms img {
@@ -70,7 +74,7 @@ header .header {
 }
 
 .container main .main {
-    row-gap: 6em;
+    row-gap: 7em;
 }
 
 main .main > * {
@@ -78,12 +82,19 @@ main .main > * {
     justify-items: center;
 }
 
+main .main > :not(.features) {
+    row-gap: 3em;
+}
+
 .main .features {
     row-gap: 2.5em;
 }
 
-.main .features .features-info {
+.main .features .features-sec {
     width: min(90%, 600px);
+}
+
+.main .features-sec .features-info {
     display: grid;
     row-gap: 1.5em;
 }
@@ -102,28 +113,69 @@ main .main > * {
     color: var(--blue);
 }
 
-.main .assets {
-    row-gap: 3em;
-}
-
 .main .assets .buttons {
     display: flex;
     flex-direction: column;
 }
 
 .main .assets .add-token-btn {
-    margin: 0.7em 0;
-    border: 2px solid var(--blue);
+    margin-top: 0.7em;
     color: var(--blue);
     background-color: var(--white);
 }
 
-.main .assets .chains-coins {
+.main .staking .staking-calculator {
+    padding: 2em;
+    border-radius: 5px;
     display: grid;
-    row-gap: 1em;
+    row-gap: 2em;
+    font-size: 0.85em;
+    box-shadow: 0 0 10px var(--dark-gray);
 }
 
-.main .assets .chain-coin {
+.main .staking-calculator .inputs {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+}
+
+.main .inputs > * {
+    border: 1px solid var(--dark-gray);
+    margin-bottom: 0.7em;
+    font-weight: normal;
+}
+
+.main .inputs > :focus {
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 5px var(--blue);
+}
+
+.main .staking-calculator .earnings {
+    display: grid;
+    row-gap: 0.7em;
+}
+
+.main .earnings > * {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .earnings .coin-amount {
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.main .staking-calculator .earn-now-btn {
+    justify-self: center;
+    width: 90%;
+    font-size: 1em;
+}
+
+.main .supported-chains h2 {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.main .supported-chains .chains-coins {
+    width: fit-content;
+    margin: 0 auto;
 }

@@ -2,15 +2,16 @@
     html {
         font-size: 17px;
     }
+    .chains-coins {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3em;
+    }
     .main .assets .buttons {
         flex-direction: row;
     }
     .main .assets .add-token-btn {
-        margin: 0 0 0 0.7em;
-    }
-    .main .assets .chains-coins {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 3em;
+        margin-top: 0;
+        margin-left: 0.7em;
     }
 }
 
@@ -18,12 +19,12 @@
     html {
         font-size: 18px;
     }
+    .chains-coins {
+        grid-template-columns: repeat(3, 1fr);
+    }
     .header .download-platforms {
         grid-auto-flow: column;
         column-gap: 18px;
-    }
-    .main .assets .chains-coins {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -36,8 +37,17 @@
         cursor: pointer;
         transition: 0.3s;
     }
+    select {
+        cursor: pointer;
+    }
     img.app-env {
         width: 450px;
+    }
+    .supported-chains {
+        grid-column: span 2;
+    }
+    .chains-coins {
+        grid-template-columns: repeat(4, 1fr);
     }
     .container header .header {
         grid-template-areas:
@@ -49,6 +59,7 @@
     }
     .header img.logo-name {
         grid-area: ln;
+        width: 250px;
     }
     .header .top-navbar {
         grid-area: tn;
@@ -61,7 +72,8 @@
     .header .top-navbar .nav-link {
         padding: 18px 6px;
         font-size: 15px;
-        box-shadow: none;
+        color: var(--white);
+        background-color: var(--blue);
     }
     .header .top-navbar .nav-link:hover {
         color: var(--black);
@@ -85,21 +97,22 @@
         margin-top: -25px;
         margin-left: -80px;
     }
+    .main .intro-content {
+        align-self: center;
+    }
     .main .features .intro-content {
         max-width: fit-content;
     }
-    .main .features .features-info {
+    .main .features > :nth-child(2) {
         width: fit-content;
+    }
+    .main .features .features-info {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 28px;
     }
     .main .assets {
         grid-template-columns: 60% 37%;
         column-gap: 30px;
-    }
-    .main .assets .intro-content {
-        justify-self: left;
-        align-self: center;
     }
     .main .assets .intro-content:nth-child(3) {
         max-width: fit-content;
@@ -112,11 +125,7 @@
         color: var(--white);
         background-color: var(--blue);
     }
-    .main .assets .chains-coins {
-        grid-column: span 2;
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .assets .additional-phrase {
-        grid-column: span 2;
+    .main .staking {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
