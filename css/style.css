@@ -7,6 +7,7 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
     --black: black;
     --white: white;
     --dark-gray: rgb(100, 100, 100);
@@ -20,7 +21,7 @@ html {
 
 .container > * > * {
     max-width: 1100px;
-    padding: 1.5em;
+    padding: 2em 1em;
     margin: 0 auto;
     display: grid;
 }
@@ -44,29 +45,19 @@ html {
     box-shadow: 0 0 30px var(--white);
 }
 
-.header .top-navbar {
-    width: min(70%, 400px);
+.header nav.header-nav {
+    width: min(70%, 370px);
     display: grid;
     row-gap: 1em;
 }
 
-.header .top-navbar .nav-link {
+.header nav.header-nav a {
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
     color: var(--black);
     background-color: var(--white);
-}
-
-.header .download-platforms {
-    height: fit-content;
-    display: grid;
-    row-gap: 0.8em;
-}
-
-.header .download-platforms a {
-    padding: 0;
-}
-
-.header .download-platforms img {
-    width: 170px;
 }
 
 .header img.app-env {
@@ -82,12 +73,20 @@ main .main > * {
     justify-items: center;
 }
 
-main .main > :not(.features) {
+.main .features,
+.main .get-trust-wallet {
+    row-gap: 2em;
+}
+
+.main .assets,
+.main .staking,
+.main .dapp-browser {
     row-gap: 3em;
 }
 
-.main .features {
-    row-gap: 2.5em;
+.main .nfts,
+.main .get-started {
+    row-gap: 4em;
 }
 
 .main .features .features-sec {
@@ -107,19 +106,14 @@ main .main > :not(.features) {
     box-shadow: 0 0 10px var(--blue);
 }
 
-.main .feature .fa-circle-check {
+.main .feature i.fa-circle-check {
     margin-right: 10px;
     font-size: 17px;
     color: var(--blue);
 }
 
-.main .assets .buttons {
-    display: flex;
-    flex-direction: column;
-}
-
-.main .assets .add-token-btn {
-    margin-top: 0.7em;
+.main .assets button.add-token {
+    margin-top: 10px;
     color: var(--blue);
     background-color: var(--white);
 }
@@ -133,18 +127,14 @@ main .main > :not(.features) {
     box-shadow: 0 0 10px var(--dark-gray);
 }
 
-.main .staking-calculator .inputs {
-    display: flex;
-    flex-direction: column;
-}
-
-.main .inputs > * {
+.main .staking-calc-inputs > * {
+    width: 90%;
     border: 1px solid var(--dark-gray);
     margin-bottom: 0.7em;
     font-weight: normal;
 }
 
-.main .inputs > :focus {
+.main .staking-calc-inputs > :focus {
     border: 1px solid var(--blue);
     box-shadow: 0 0 5px var(--blue);
 }
@@ -164,18 +154,103 @@ main .main > :not(.features) {
     color: var(--blue);
 }
 
-.main .staking-calculator .earn-now-btn {
+.main .staking-calculator button.earn-now {
     justify-self: center;
     width: 90%;
     font-size: 1em;
 }
 
-.main .supported-chains h2 {
+.main .staking h2:first-child {
     margin-bottom: 2em;
     text-align: center;
 }
 
-.main .supported-chains .chains-coins {
-    width: fit-content;
+.main .supported-chains h1 {
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 1.7em;
+}
+
+.main .dapp-browser ul {
+    width: 90%;
     margin: 0 auto;
+}
+
+.main .dapp-browser li {
+    margin-top: 1em;
+    text-align: left;
+}
+
+.main .nfts button.download-now,
+.main .dapp-browser button.download-now {
+    margin-top: 2em;
+}
+
+.main .get-started .steps {
+    display: grid;
+    row-gap: 2em;
+}
+
+.main .get-trust-wallet h1 {
+    font-size: 1.2em;
+}
+
+.main .get-trust-wallet h2 {
+    font-size: 0.8em;
+}
+
+.container footer {
+    background-color: rgb(220, 220, 220);
+}
+
+.container footer .footer {
+    row-gap: 3em;
+}
+
+.footer .logo-social img.logo-name {
+    width: 200px;
+    margin-bottom: 1.5em;
+}
+
+.footer .logo-social nav.social-media {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 1em;
+}
+
+.footer nav.social-media i.fa-brands {
+    font-size: 1.2em;
+    color: rgb(90, 90, 90);
+}
+
+.footer nav.footer-nav {
+    display: grid;
+    row-gap: 3em;
+}
+
+.footer nav.footer-nav > * {
+    display: grid;
+    row-gap: 1em;
+}
+
+.footer nav.footer-nav * {
+    justify-self: center;
+}
+
+.footer nav.footer-nav span {
+    font-weight: bold;
+}
+
+.footer nav.footer-nav a {
+    width: fit-content;
+    font-size: 0.83em;
+}
+
+.main .assets .buttons,
+.main .staking-calculator .staking-calc-inputs,
+.main .get-started .step,
+.footer .logo-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

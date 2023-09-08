@@ -2,14 +2,18 @@
     html {
         font-size: 17px;
     }
+    nav.download-platforms {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1em;
+    }
     .chains-coins {
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 3em;
+        column-gap: 2em;
     }
     .main .assets .buttons {
         flex-direction: row;
     }
-    .main .assets .add-token-btn {
+    .main .assets button.add-token {
         margin-top: 0;
         margin-left: 0.7em;
     }
@@ -19,12 +23,15 @@
     html {
         font-size: 18px;
     }
+    nav.download-platforms,
+    .container footer .footer {
+        grid-auto-flow: column;
+    }
     .chains-coins {
         grid-template-columns: repeat(3, 1fr);
     }
-    .header .download-platforms {
-        grid-auto-flow: column;
-        column-gap: 18px;
+    .footer nav.footer-nav {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -33,7 +40,8 @@
         font-size: 19px;
     }
     a,
-    button {
+    button,
+    i {
         cursor: pointer;
         transition: 0.3s;
     }
@@ -61,7 +69,7 @@
         grid-area: ln;
         width: 250px;
     }
-    .header .top-navbar {
+    .header nav.header-nav {
         grid-area: tn;
         width: 100%;
         grid-template-columns: repeat(5, 18.5%);
@@ -69,13 +77,13 @@
         align-content: center;
         column-gap: 10px;
     }
-    .header .top-navbar .nav-link {
+    .header nav.header-nav a {
         padding: 18px 6px;
         font-size: 15px;
         color: var(--white);
         background-color: var(--blue);
     }
-    .header .top-navbar .nav-link:hover {
+    .header nav.header-nav a:hover {
         color: var(--black);
         background-color: var(--white);
     }
@@ -85,11 +93,17 @@
         width: 78%;
         text-align: left;
     }
-    .header .download-platforms {
+    .header nav.download-platforms,
+    .main .features .features-info,
+    .main .staking,
+    .main .dapp-browser,
+    .main .get-trust-wallet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .header nav.download-platforms {
         grid-area: dp;
         justify-self: left;
         margin-top: -150px;
-        grid-template-columns: repeat(2, 1fr);
         grid-auto-flow: row;
     }
     .header img.app-env {
@@ -97,35 +111,52 @@
         margin-top: -25px;
         margin-left: -80px;
     }
-    .main .intro-content {
-        align-self: center;
-    }
-    .main .features .intro-content {
-        max-width: fit-content;
-    }
-    .main .features > :nth-child(2) {
+    .main .features .features-sec {
         width: fit-content;
     }
     .main .features .features-info {
-        grid-template-columns: repeat(2, 1fr);
         column-gap: 28px;
     }
     .main .assets {
         grid-template-columns: 60% 37%;
         column-gap: 30px;
     }
-    .main .assets .intro-content:nth-child(3) {
-        max-width: fit-content;
-        text-align: left;
-    }
-    .main .assets .buttons {
-        align-self: center;
-    }
-    .main .assets .add-token-btn:hover {
+    .main .assets button.add-token:hover {
         color: var(--white);
         background-color: var(--blue);
     }
-    .main .staking {
-        grid-template-columns: repeat(2, 1fr);
+    .main .dapp-browser .intro-content {
+        order: 1;
+    }
+    .main .get-started .steps {
+        grid-auto-flow: column;
+        column-gap: 130px;
+    }
+    .main .get-trust-wallet {
+        column-gap: 30px;
+    }
+    .main .intro-content,
+    .main .assets .buttons,
+    .main .get-trust-wallet nav.download-platforms {
+        align-self: center;
+    }
+    .main .assets .intro-content:nth-child(3),
+    .main .get-trust-wallet .intro-content {
+        text-align: left;
+    }
+    .footer nav.social-media i.fa-github:hover {
+        color: var(--black);
+    }
+    .footer nav.social-media i.fa-twitter:hover {
+        color: rgb(23, 156, 240);
+    }
+    .footer nav.social-media i.fa-discord:hover {
+        color: rgba(88, 101, 242);
+    }
+    .footer nav.social-media i.fa-telegram:hover {
+        color: rgba(44, 165, 224);
+    }
+    .footer nav.footer-nav a:hover {
+        text-decoration: underline;
     }
 }

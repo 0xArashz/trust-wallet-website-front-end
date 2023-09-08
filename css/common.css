@@ -1,4 +1,7 @@
-a,
+a {
+    all: unset;
+}
+
 button,
 input,
 select {
@@ -6,10 +9,6 @@ select {
     padding: 1em;
     border-radius: 5px;
     font-weight: bold;
-}
-
-a {
-    text-align: center;
 }
 
 button {
@@ -34,7 +33,7 @@ h2 {
 
 img.app-env {
     width: min(100%, 500px);
-    animation: up-down 4s linear infinite;
+    animation: up-down 3.5s linear infinite;
 }
 
 @keyframes up-down {
@@ -50,16 +49,27 @@ img.crypto-logo {
     margin-right: 10px;
 }
 
+nav.download-platforms {
+    height: fit-content;
+    display: grid;
+    row-gap: 0.8em;
+}
+
+nav.download-platforms img {
+    width: 170px;
+}
+
 span {
     font-size: 0.83em;
 }
 
 .intro-content {
-    max-width: 520px;
     text-align: center;
 }
 
 .chains-coins {
+    width: fit-content;
+    margin: 0 auto;
     display: grid;
     row-gap: 1em;
 }
